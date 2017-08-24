@@ -1,0 +1,25 @@
+[req]
+    distinguished_name = test_certs
+    req_extensions = v3_req
+    
+    [test_certs]
+    countryName = IN
+    countryName_default = CN
+    stateOrProvinceName = .
+    stateOrProvinceName_default = BeiJing
+    localityName = .
+    localityName_default = YaYunCun
+    organizationUnitName = .
+    organizationUnitName_default = Domain Control Validated
+    commonName = Internet Widgits Ltd
+    commonName_max = 64
+    
+    [ v3_req ]
+    
+    basicConstraints = CA:FALSE
+    keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+    subjectAltName = @alt_names
+
+    [alt_names]
+    
+    IP.1 = 127.0.0.1
